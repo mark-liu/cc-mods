@@ -1,0 +1,39 @@
+# cc-mods
+
+Claude Code mods: in-process TypeScript plugin hooks, published as a plugin marketplace.
+
+Mods need Claude Code 2.1.287 or later. The module hook API is early access and changes between releases, so expect breakage on upgrade.
+
+## Install
+
+```
+/plugin marketplace add mark-liu/cc-mods
+/plugin install dash-scrub@cc-mods
+```
+
+## Plugins
+
+### dash-scrub
+
+Rewrites em and en dashes in assistant prose before the message is stored, so the transcript and the rendered reply never carry them.
+
+- Unspaced dash between digits becomes a hyphen: `110` + dash + `155` reads `110-155`
+- Spaced or bare dash in prose becomes a comma; a leading dash becomes a `-` bullet; a trailing dash is dropped
+- Code spans, backtick and tilde fences, and URLs pass through untouched; lines are never joined
+
+Scope: assistant `text` blocks only (`session.append`, response door). Files, commit messages and tool inputs are not touched.
+
+Layout: pure logic in `hooks/scrub.ts`, the hook in `hooks/register.ts`, tests in `hooks/scrub.test.ts`.
+
+## Develop
+
+```
+claude plugin validate plugins/<name>
+claude plugin test plugins/<name>
+```
+
+Load a working copy without installing: `CLAUDE_CODE_PLUGIN_DIRS=/path/to/plugins/<name> claude`.
+
+## Licence
+
+MIT

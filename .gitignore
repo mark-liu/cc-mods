@@ -1,0 +1,4 @@
+# Engine-generated per load
+plugins/*/.claude-plugin/types/
+node_modules/
+.DS_Store

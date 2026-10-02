@@ -1,0 +1,10 @@
+{
+  "name": "dash-scrub",
+  "version": "0.1.0",
+  "description": "Replace em and en dashes in assistant prose before the row is stored",
+  "author": {
+    "name": "Mark Liu"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/mark-liu/cc-mods"
+}

@@ -1,0 +1,16 @@
+{
+  "name": "cc-mods",
+  "owner": {
+    "name": "mark-liu"
+  },
+  "plugins": [
+    {
+      "name": "dash-scrub",
+      "source": "./plugins/dash-scrub",
+      "description": "Replace em and en dashes in assistant prose before the row is stored"
+    }
+  ],
+  "metadata": {
+    "description": "Claude Code mods: in-process TypeScript plugin hooks"
+  }
+}
