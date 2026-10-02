@@ -8,6 +8,11 @@
       "name": "dash-scrub",
       "source": "./plugins/dash-scrub",
       "description": "Replace em and en dashes in assistant prose before the row is stored"
+    },
+    {
+      "name": "reminder-trim",
+      "source": "./plugins/reminder-trim",
+      "description": "Stop the engine's task and todo list reminders from reaching the model"
     }
   ],
   "metadata": {

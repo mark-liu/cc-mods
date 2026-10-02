@@ -1,0 +1,10 @@
+{
+  "name": "reminder-trim",
+  "version": "0.1.0",
+  "description": "Stop the engine's task and todo list reminders from reaching the model",
+  "author": {
+    "name": "Mark Liu"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/mark-liu/cc-mods"
+}
